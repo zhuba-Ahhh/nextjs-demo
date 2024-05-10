@@ -1,5 +1,6 @@
+"use client";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 export interface IPageTransition
   extends React.ComponentPropsWithoutRef<"div"> {}
@@ -11,8 +12,15 @@ const variants = {
 };
 
 const PageTransition: React.FC<IPageTransition> = ({ children }) => {
+  // 使用 useRouter 获取路由实例
   const router = useRouter();
-  const pageKey = router.asPath;
+  // 使用 usePathname 获取当前路径
+  const pathname = usePathname();
+  // 使用 useSearchParams 获取查询参数对象
+  const searchParams = useSearchParams();
+
+  // 如果你需要构建 asPath 这样的字符串
+  const pageKey = `${pathname}?${searchParams}`;
 
   return (
     <motion.div
