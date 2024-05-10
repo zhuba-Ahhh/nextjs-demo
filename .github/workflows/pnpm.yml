@@ -39,9 +39,9 @@ jobs:
       - name: Build  📦
         run: pnpm build
 
-      - name: Deploy 🚀
-        if: ${{ matrix.os == 'ubuntu-latest' }}
-        uses: JamesIves/github-pages-deploy-action@v4.6.0
-        with:
-          branch: gh-pages
-          folder: dist
+      # - name: Deploy 🚀
+      #   if: ${{ matrix.os == 'ubuntu-latest' }}
+      #   uses: JamesIves/github-pages-deploy-action@v4.6.0
+      #   with:
+      #     branch: gh-pages
+      #     folder: dist
