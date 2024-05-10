@@ -1,7 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 import "./globals.css";
-import { NextPageWithLayout } from "./page";
+import { NextPageWithLayout } from "../types";
 
 interface AppPropsWithLayout extends AppProps {
   Component: NextPageWithLayout;
