@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ["i.pravatar.cc"],
   },
+  transpilePackages: ["antd"],
+  corePlugins: {
+    preflight: false,
+  },
 };
 
 export default nextConfig;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./CatCard.module.css";
+import { Button } from "antd";
 
 export interface ICatCard {
   tag: string;
@@ -29,13 +30,14 @@ const CatCard: React.FC<ICatCard> = ({ tag, title, body, author, time }) => {
         </div>
         <div className={styles.card__footer}>
           <div className={styles.user}>
-            <Image
+            {/* <Image
               src="https://i.pravatar.cc/40?img=3"
               alt="user__image"
               className={styles.user__image}
               width="40"
               height="40"
-            />
+            /> */}
+            <Button type="primary">Button</Button>
             <div className={styles.user__info}>
               <h5>{author}</h5>
               <small>{time}</small>
